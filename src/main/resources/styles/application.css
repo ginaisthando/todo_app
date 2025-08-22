@@ -1,0 +1,299 @@
+/* Todo List Application Styles */
+
+/* Root styling */
+.root {
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-size: 12px;
+    -fx-background-color: #f8f9fa;
+}
+
+/* Menu bar styling */
+.menu-bar {
+    -fx-background-color: #343a40;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 0 0 1 0;
+}
+
+.menu-bar .menu .label {
+    -fx-text-fill: white;
+}
+
+.menu-bar .menu:hover {
+    -fx-background-color: #495057;
+}
+
+/* Button styling */
+.button {
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-padding: 8 16 8 16;
+    -fx-font-weight: normal;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-opacity: 0.8;
+}
+
+.button:pressed {
+    -fx-opacity: 0.6;
+}
+
+.button:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}
+
+/* Primary button (Add Task) */
+.button-primary {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+}
+
+.button-primary:hover {
+    -fx-background-color: #0056b3;
+}
+
+/* Success button (Mark Complete) */
+.button-success {
+    -fx-background-color: #28a745;
+    -fx-text-fill: white;
+}
+
+.button-success:hover {
+    -fx-background-color: #1e7e34;
+}
+
+/* Warning button (Update) */
+.button-warning {
+    -fx-background-color: #ffc107;
+    -fx-text-fill: #212529;
+}
+
+.button-warning:hover {
+    -fx-background-color: #e0a800;
+}
+
+/* Danger button (Delete) */
+.button-danger {
+    -fx-background-color: #dc3545;
+    -fx-text-fill: white;
+}
+
+.button-danger:hover {
+    -fx-background-color: #c82333;
+}
+
+/* Secondary button (Clear Completed) */
+.button-secondary {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+}
+
+.button-secondary:hover {
+    -fx-background-color: #545b62;
+}
+
+/* Table styling */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #e9ecef;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 0 1 0 0;
+    -fx-font-weight: bold;
+}
+
+.table-view .table-cell {
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 0 1 1 0;
+    -fx-padding: 8;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #e9ecef;
+}
+
+.table-row-cell:selected:hover {
+    -fx-background-color: #0056b3;
+}
+
+/* Form controls */
+.text-field, .text-area {
+    -fx-background-color: white;
+    -fx-border-color: #ced4da;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+    -fx-padding: 6 12 6 12;
+}
+
+.text-field:focused, .text-area:focused {
+    -fx-border-color: #007bff;
+    -fx-border-width: 2;
+}
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #ced4da;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+}
+
+.combo-box:focused {
+    -fx-border-color: #007bff;
+    -fx-border-width: 2;
+}
+
+.date-picker {
+    -fx-background-color: white;
+    -fx-border-color: #ced4da;
+    -fx-border-width: 1;
+    -fx-border-radius: 4;
+}
+
+.date-picker:focused {
+    -fx-border-color: #007bff;
+    -fx-border-width: 2;
+}
+
+/* Progress bar */
+.progress-bar {
+    -fx-background-color: #e9ecef;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+}
+
+.progress-bar .bar {
+    -fx-background-color: #28a745;
+    -fx-background-radius: 4;
+}
+
+/* Labels */
+.label {
+    -fx-text-fill: #495057;
+}
+
+.label-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #212529;
+}
+
+.label-stats {
+    -fx-font-weight: bold;
+}
+
+.label-overdue {
+    -fx-text-fill: #dc3545;
+    -fx-font-weight: bold;
+}
+
+.label-completed {
+    -fx-text-fill: #28a745;
+    -fx-font-weight: bold;
+}
+
+/* Priority indicators */
+.priority-low {
+    -fx-background-color: #d4edda;
+    -fx-text-fill: #155724;
+    -fx-padding: 2 6 2 6;
+    -fx-background-radius: 3;
+}
+
+.priority-medium {
+    -fx-background-color: #fff3cd;
+    -fx-text-fill: #856404;
+    -fx-padding: 2 6 2 6;
+    -fx-background-radius: 3;
+}
+
+.priority-high {
+    -fx-background-color: #f8d7da;
+    -fx-text-fill: #721c24;
+    -fx-padding: 2 6 2 6;
+    -fx-background-radius: 3;
+}
+
+.priority-urgent {
+    -fx-background-color: #dc3545;
+    -fx-text-fill: white;
+    -fx-padding: 2 6 2 6;
+    -fx-background-radius: 3;
+    -fx-font-weight: bold;
+}
+
+/* Split pane */
+.split-pane {
+    -fx-background-color: transparent;
+}
+
+.split-pane .split-pane-divider {
+    -fx-background-color: #dee2e6;
+    -fx-padding: 0 2 0 2;
+}
+
+/* Check box */
+.check-box {
+    -fx-text-fill: #495057;
+}
+
+.check-box .box {
+    -fx-background-color: white;
+    -fx-border-color: #ced4da;
+    -fx-border-width: 1;
+    -fx-border-radius: 3;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #007bff;
+}
+
+/* Scroll pane */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* Separator */
+.separator .line {
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1 0 0 0;
+}
+
+/* Status bar */
+.status-bar {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #dee2e6;
+    -fx-border-width: 1 0 0 0;
+    -fx-padding: 5 10 5 10;
+}
+
+/* Tooltip */
+.tooltip {
+    -fx-background-color: #212529;
+    -fx-text-fill: white;
+    -fx-background-radius: 4;
+    -fx-padding: 4 8 4 8;
+    -fx-font-size: 11px;
+}

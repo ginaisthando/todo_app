@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.todoapp.controller.MainController">
+   <top>
+      <VBox spacing="10.0">
+         <children>
+            <!-- Menu Bar -->
+            <MenuBar>
+               <menus>
+                  <Menu mnemonicParsing="false" text="File">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="New Task" />
+                        <SeparatorMenuItem />
+                        <MenuItem mnemonicParsing="false" text="Exit" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Edit">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Clear Completed" />
+                        <MenuItem mnemonicParsing="false" text="Clear All" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="View">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Refresh" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Help">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+            
+            <!-- Search and Filter Bar -->
+            <HBox alignment="CENTER_LEFT" spacing="10.0">
+               <children>
+                  <Label text="Search:" />
+                  <TextField fx:id="searchField" promptText="Search tasks..." HBox.hgrow="ALWAYS" />
+                  <Label text="Filter:" />
+                  <ComboBox fx:id="filterComboBox" prefWidth="120.0" />
+                  <Label text="Sort by:" />
+                  <ComboBox fx:id="sortComboBox" prefWidth="120.0" />
+                  <CheckBox fx:id="ascendingCheckBox" text="Ascending" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
+            </HBox>
+            
+            <!-- Statistics Bar -->
+            <HBox alignment="CENTER_LEFT" spacing="15.0">
+               <children>
+                  <Label fx:id="totalTasksLabel" text="Total: 0" />
+                  <Label fx:id="completedTasksLabel" text="Completed: 0" />
+                  <Label fx:id="pendingTasksLabel" text="Pending: 0" />
+                  <Label fx:id="overdueTasksLabel" text="Overdue: 0" />
+                  <Separator orientation="VERTICAL" />
+                  <Label text="Progress:" />
+                  <ProgressBar fx:id="completionProgressBar" prefWidth="100.0" />
+                  <Region HBox.hgrow="ALWAYS" />
+                  <Label fx:id="storageTypeLabel" text="Storage: File" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </top>
+   
+   <center>
+      <SplitPane dividerPositions="0.7" orientation="HORIZONTAL">
+         <items>
+            <!-- Task Table -->
+            <VBox>
+               <children>
+                  <Label text="Tasks" style="-fx-font-weight: bold; -fx-font-size: 14px;">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TableView fx:id="taskTable" VBox.vgrow="ALWAYS">
+                     <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="50.0" text="ID" />
+                        <TableColumn fx:id="titleColumn" prefWidth="150.0" text="Title" />
+                        <TableColumn fx:id="descriptionColumn" prefWidth="200.0" text="Description" />
+                        <TableColumn fx:id="priorityColumn" prefWidth="80.0" text="Priority" />
+                        <TableColumn fx:id="dueDateColumn" prefWidth="130.0" text="Due Date" />
+                        <TableColumn fx:id="statusColumn" prefWidth="100.0" text="Status" />
+                        <TableColumn fx:id="createdDateColumn" prefWidth="130.0" text="Created" />
+                     </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </VBox>
+            
+            <!-- Task Form -->
+            <VBox spacing="10.0">
+               <children>
+                  <Label text="Task Details" style="-fx-font-weight: bold; -fx-font-size: 14px;" />
+                  
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label text="Title *" />
+                        <TextField fx:id="titleField" promptText="Enter task title..." />
+                     </children>
+                  </VBox>
+                  
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label text="Description" />
+                        <TextArea fx:id="descriptionArea" prefRowCount="3" promptText="Enter task description..." wrapText="true" />
+                     </children>
+                  </VBox>
+                  
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label text="Priority" />
+                        <ComboBox fx:id="priorityComboBox" maxWidth="1.7976931348623157E308" />
+                     </children>
+                  </VBox>
+                  
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label text="Due Date" />
+                        <DatePicker fx:id="dueDatePicker" maxWidth="1.7976931348623157E308" />
+                     </children>
+                  </VBox>
+                  
+                  <VBox spacing="5.0">
+                     <children>
+                        <Label text="Due Time" />
+                        <TextField fx:id="dueTimeField" promptText="HH:MM (24-hour format)" />
+                     </children>
+                  </VBox>
+                  
+                  <Separator />
+                  
+                  <!-- Action Buttons -->
+                  <VBox spacing="8.0">
+                     <children>
+                        <Button fx:id="addButton" maxWidth="1.7976931348623157E308" text="Add Task" style="-fx-background-color: #28a745; -fx-text-fill: white;" />
+                        <Button fx:id="updateButton" maxWidth="1.7976931348623157E308" text="Update Task" style="-fx-background-color: #007bff; -fx-text-fill: white;" />
+                        <Button fx:id="completeButton" maxWidth="1.7976931348623157E308" text="Mark Complete" style="-fx-background-color: #17a2b8; -fx-text-fill: white;" />
+                        <Button fx:id="deleteButton" maxWidth="1.7976931348623157E308" text="Delete Task" style="-fx-background-color: #dc3545; -fx-text-fill: white;" />
+                        
+                        <Separator />
+                        
+                        <Button fx:id="clearCompletedButton" maxWidth="1.7976931348623157E308" text="Clear Completed Tasks" style="-fx-background-color: #6c757d; -fx-text-fill: white;" />
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </items>
+      </SplitPane>
+   </center>
+   
+   <bottom>
+      <HBox alignment="CENTER_LEFT" spacing="10.0">
+         <children>
+            <Label text="Todo List Manager v1.0.0" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label text="Ready" />
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </HBox>
+   </bottom>
+</BorderPane>

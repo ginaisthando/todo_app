@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Project Documentation",
+    "description": "Write comprehensive documentation for the Java Todo List application including setup instructions, user guide, and technical documentation.",
+    "priority": "HIGH",
+    "completed": false,
+    "dueDate": "2024-02-15 17:00:00",
+    "createdDate": "2024-01-15 09:00:00",
+    "completedDate": null
+  },
+  {
+    "id": 2,
+    "title": "Code Review and Refactoring",
+    "description": "Review the codebase for potential improvements, refactor complex methods, and ensure adherence to coding standards.",
+    "priority": "MEDIUM",
+    "completed": true,
+    "dueDate": "2024-01-20 12:00:00",
+    "createdDate": "2024-01-10 14:30:00",
+    "completedDate": "2024-01-19 16:45:00"
+  },
+  {
+    "id": 3,
+    "title": "Database Schema Optimization",
+    "description": "Optimize database queries, add proper indexing, and implement database connection pooling for better performance.",
+    "priority": "MEDIUM",
+    "completed": false,
+    "dueDate": "2024-02-01 10:00:00",
+    "createdDate": "2024-01-12 11:15:00",
+    "completedDate": null
+  },
+  {
+    "id": 4,
+    "title": "User Interface Enhancements",
+    "description": "Improve the JavaFX user interface with better styling, icons, and user experience enhancements.",
+    "priority": "LOW",
+    "completed": false,
+    "dueDate": "2024-02-10 15:30:00",
+    "createdDate": "2024-01-14 13:20:00",
+    "completedDate": null
+  },
+  {
+    "id": 5,
+    "title": "Unit Test Coverage",
+    "description": "Increase unit test coverage to at least 80% and add integration tests for database operations.",
+    "priority": "HIGH",
+    "completed": false,
+    "dueDate": "2024-01-25 18:00:00",
+    "createdDate": "2024-01-13 10:45:00",
+    "completedDate": null
+  },
+  {
+    "id": 6,
+    "title": "Performance Benchmarking",
+    "description": "Conduct performance testing with large datasets and identify bottlenecks in the application.",
+    "priority": "LOW",
+    "completed": false,
+    "dueDate": "2024-02-20 14:00:00",
+    "createdDate": "2024-01-16 08:30:00",
+    "completedDate": null
+  },
+  {
+    "id": 7,
+    "title": "Security Audit",
+    "description": "Perform security audit of the application, check for SQL injection vulnerabilities, and implement input validation.",
+    "priority": "URGENT",
+    "completed": false,
+    "dueDate": "2024-01-30 16:00:00",
+    "createdDate": "2024-01-17 12:00:00",
+    "completedDate": null
+  },
+  {
+    "id": 8,
+    "title": "Setup Continuous Integration",
+    "description": "Configure CI/CD pipeline with automated testing, code quality checks, and deployment automation.",
+    "priority": "MEDIUM",
+    "completed": true,
+    "dueDate": "2024-01-22 11:00:00",
+    "createdDate": "2024-01-11 15:45:00",
+    "completedDate": "2024-01-21 10:30:00"
+  },
+  {
+    "id": 9,
+    "title": "Backup and Recovery System",
+    "description": "Implement automated backup system for task data and create disaster recovery procedures.",
+    "priority": "MEDIUM",
+    "completed": false,
+    "dueDate": "2024-02-05 13:30:00",
+    "createdDate": "2024-01-18 09:15:00",
+    "completedDate": null
+  },
+  {
+    "id": 10,
+    "title": "User Manual Creation",
+    "description": "Create detailed user manual with screenshots and step-by-step instructions for end users.",
+    "priority": "LOW",
+    "completed": false,
+    "dueDate": "2024-02-12 17:30:00",
+    "createdDate": "2024-01-19 14:00:00",
+    "completedDate": null
+  }
+]
